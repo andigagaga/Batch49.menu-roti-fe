@@ -73,7 +73,12 @@ export default class Home extends Component<object, State> {
       <React.Fragment>
         <div className="d-flex flex-row w-100 ">
           <div className="container w-25">
-            <h1>List Menu</h1>
+            <i className="fa-solid fa-user"></i>: GUSWANDI
+            <img
+              src="https://tse2.mm.bing.net/th?id=OIP.3kOhoThi0MdkLT-Klnu8dgHaEV&pid=Api&P=0&h=180"
+              alt=""
+            />
+            <h1 className="fw-bolder">List Menu</h1>
             <hr />
             <form action="">
               <input
@@ -91,17 +96,7 @@ export default class Home extends Component<object, State> {
             </form>
             <div className="d-flex my-3">
               <div>
-              <div>
-                <h5>ShowMenu</h5>
-                <i
-                  className={`fa-solid fa-arrow-${
-                    this.state.isMenuVisible ? "down" : "right"
-                  }`}
-                  onClick={this.toggleMenu}
-                  style={{ cursor: "pointer" }}
-                ></i>
-              </div>
-                  <h5>Menu</h5>
+                <h5>Menu</h5>
                 <div className="form-check" mb-5>
                   <input
                     className="form-check-input"
@@ -225,7 +220,16 @@ export default class Home extends Component<object, State> {
                   </label>
                 </div>
               </div>
-              
+            </div>
+            <div>
+              <h5>ShowCategory</h5>
+              <i
+                className={`fa-solid fa-arrow-${
+                  this.state.isMenuVisible ? "down" : "right"
+                }`}
+                onClick={this.toggleMenu}
+                style={{ cursor: "pointer" }}
+              ></i>
             </div>
 
             {this.state.isMenuVisible && (
