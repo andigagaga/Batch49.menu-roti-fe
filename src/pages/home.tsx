@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import NavBarHome from "../Components/Fragments/NavBar.Home";
 
 interface ApiItem {
   id: number;
@@ -71,9 +72,9 @@ export default class Home extends Component<object, State> {
   render() {
     return (
       <React.Fragment>
+        <NavBarHome />
         <div className="d-flex flex-row w-100 ">
           <div className="container w-25">
-            <i className="fa-solid fa-user"></i>: GUSWANDI
             <img
               src="https://tse2.mm.bing.net/th?id=OIP.3kOhoThi0MdkLT-Klnu8dgHaEV&pid=Api&P=0&h=180"
               alt=""
@@ -90,7 +91,7 @@ export default class Home extends Component<object, State> {
                 type="submit"
                 className="btn btn-primary p-1"
                 onClick={(e) => this.handleSubmit(e)}
-              >
+               >
                 <i className="bi bi-search"></i> Search
               </button>
             </form>
@@ -100,7 +101,7 @@ export default class Home extends Component<object, State> {
                 <div className="form-check" mb-5>
                   <input
                     className="form-check-input"
-                    type="checkbox"
+ 
                     id="checkbox1"
                     onChange={() => this.handeleTagChange("Borgir")}
                   />
@@ -291,7 +292,7 @@ export default class Home extends Component<object, State> {
             )}
           </div>
 
-          <div className="w-75 bg-info p-5">
+          <div className="w-75 bg-dark-subtle p-5">
             <div className="d-flex gap-5 flex-wrap h-25">
               {this.state.apiData.map((item) => (
                 <div className="card w-25 h-100" key={item.id}>
