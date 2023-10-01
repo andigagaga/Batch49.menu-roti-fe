@@ -6,7 +6,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { Center, Text, Input, Box } from "@chakra-ui/react";
 
 // import NavBar from "./NavBar";
-import NavBarLog from "./NavBar.Log";
+import NavBarLog from "../../NavBar/NavBar.Log";
 
 export default class FormLogin extends React.Component {
   render() {

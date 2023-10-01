@@ -1,10 +1,9 @@
 import React from "react";
-// import Home from "./pages/home";
 import ButtonBlack from "../Elements/Button/Index";
 
 import { ChakraProvider } from "@chakra-ui/react";
 import { Center, Text, Input, Box } from "@chakra-ui/react";
-import NavBarReg from "./NavBar.Reg";
+import NavBarReg from "../../NavBar/NavBar.Reg";
 
 export default class FormRegister extends React.Component {
   render() {

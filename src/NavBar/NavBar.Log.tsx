@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 
-export default class Example extends Component {
+export default class NavBarLog extends Component {
   render() {
     return (
       <React.Fragment>

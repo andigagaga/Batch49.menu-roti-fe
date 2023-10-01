@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import NavBarHome from "../Components/Fragments/NavBar.Home";
+import NavBarHome from "../../NavBar/NavBar.Home";
+import { Link } from "react-router-dom";
+import { ChakraProvider } from "@chakra-ui/react";
+import { Button } from "@chakra-ui/react";
+
 
 interface ApiItem {
   id: number;
@@ -72,6 +76,7 @@ export default class Home extends Component<object, State> {
   render() {
     return (
       <React.Fragment>
+        <ChakraProvider>
         <NavBarHome />
         <div className="d-flex flex-row w-100 ">
           <div className="container w-25">
@@ -91,7 +96,7 @@ export default class Home extends Component<object, State> {
                 type="submit"
                 className="btn btn-primary p-1"
                 onClick={(e) => this.handleSubmit(e)}
-               >
+              >
                 <i className="bi bi-search"></i> Search
               </button>
             </form>
@@ -101,7 +106,6 @@ export default class Home extends Component<object, State> {
                 <div className="form-check" mb-5>
                   <input
                     className="form-check-input"
- 
                     id="checkbox1"
                     onChange={() => this.handeleTagChange("Borgir")}
                   />
@@ -294,7 +298,7 @@ export default class Home extends Component<object, State> {
 
           <div className="w-75 bg-dark-subtle p-5">
             <div className="d-flex gap-5 flex-wrap h-25">
-              {this.state.apiData.map((item) => (
+              {this.state.apiData.map((item, id) => (
                 <div className="card w-25 h-100" key={item.id}>
                   <img
                     src={item.imageUrl}
@@ -318,12 +322,17 @@ export default class Home extends Component<object, State> {
                     >
                       {item.description}
                     </p>
+                          <Link to={`/detail/${id}`}>
+                            <Button color="red">Detail</Button>
+                          </Link>
                   </div>
                 </div>
               ))}
             </div>
           </div>
         </div>
+        </ChakraProvider>
+        
       </React.Fragment>
     );
   }

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 
-export default class NavBar extends Component {
+export default class NavBarReg extends Component {
   render() {
     return (
       <React.Fragment>
@@ -14,35 +14,36 @@ export default class NavBar extends Component {
                 className="navbar-toggler"
                 type="button"
                 data-bs-toggle="collapse"
-                data-bs-target="#navbarNav"
-                aria-controls="navbarNav"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
                 aria-expanded="false"
                 aria-label="Toggle navigation"
               >
                 <span className="navbar-toggler-icon"></span>
               </button>
-              <div className="collapse navbar-collapse" id="navbarNav">
-                <ul className="navbar-nav">
-                  <li className="nav-item mx-5">
-                    <Link
-                      className="nav-link active bg-danger rounded"
+              <div
+                className="collapse navbar-collapse"
+                id="navbarSupportedContent"
+              >
+                <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li className="nav-item">
+                  <Link
+                      className="nav-link active bg-danger rounded mx-5"
                       aria-current="page"
                       to={"/"}
                     >
                       Home
                     </Link>
                   </li>
-                  <li className="nav-item mx-5">
-                    <Link className="nav-link bg-warning rounded" to={"/FormRegister"}>
+                </ul>
+                <form className="d-flex" role="search">
+                <Link className="nav-link bg-warning rounded text-white fw-bolder mx-2 p-1" to={"/FormRegister"}>
                       Register
                     </Link>
-                  </li>
-                  <li className="nav-item mx-5">
-                    <Link className="nav-link bg-success rounded" to={"/FormLogin"}>
+                <Link className="nav-link bg-success  mx-5 rounded p-1" to={"/FormLogin"}>
                       Login
-                    </Link>
-                  </li>
-                </ul>
+                </Link>
+                </form>
               </div>
             </div>
           </nav>

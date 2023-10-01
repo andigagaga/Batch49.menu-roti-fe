@@ -9,7 +9,7 @@ export default class NavBarHome extends Component {
         <div>
           <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
-            <i className="fa-solid fa-2x fa-burger"></i>
+              <i className="fa-solid fa-2x fa-burger"></i>
               <button
                 className="navbar-toggler"
                 type="button"
@@ -27,7 +27,7 @@ export default class NavBarHome extends Component {
               >
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                   <li className="nav-item">
-                  <Link
+                    <Link
                       className="nav-link active bg-danger rounded text-white fw-bolder mx-5"
                       aria-current="page"
                       to={"/"}
@@ -37,12 +37,18 @@ export default class NavBarHome extends Component {
                   </li>
                 </ul>
                 <form className="d-flex" role="search">
-                <Link className="nav-link bg-warning rounded mx-2 p-1" to={"/FormRegister"}>
-                      Register
-                    </Link>
-                <Link className="nav-link bg-success  mx-5 rounded p-1" to={"/FormLogin"}>
-                      Login
-                </Link>
+                  <Link
+                    className="nav-link bg-warning rounded mx-2 p-1"
+                    to={"/FormRegister"}
+                  >
+                    Register
+                  </Link>
+                  <Link
+                    className="nav-link bg-success  mx-5 rounded p-1"
+                    to={"/FormLogin"}
+                  >
+                    Login
+                  </Link>
                 </form>
               </div>
             </div>

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 
-export default class Example extends Component {
+export default class NavBarHome extends Component {
   render() {
     return (
       <React.Fragment>
@@ -37,7 +37,7 @@ export default class Example extends Component {
                   </li>
                 </ul>
                 <form className="d-flex" role="search">
-                <Link className="nav-link bg-warning rounded text-white fw-bolder mx-2 p-1" to={"/FormRegister"}>
+                <Link className="nav-link bg-warning rounded mx-2 p-1" to={"/FormRegister"}>
                       Register
                     </Link>
                 <Link className="nav-link bg-success  mx-5 rounded p-1" to={"/FormLogin"}>
