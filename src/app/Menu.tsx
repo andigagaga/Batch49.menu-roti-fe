@@ -23,7 +23,7 @@ export default function Menu() {
           </div>
           <div className="w-2/4 p-12 flex items-center justify-center h-full relative">
             <div>
-              <div className="absolute top-16 left-12 p-2 overflow-y-auto">
+              <div className="absolute top-16 left-12 p-2 overflow-y-auto border">
                 <div className="flex items-center">
                   {" "}
                   {/* Container untuk gambar dan teks */}
@@ -82,7 +82,7 @@ export default function Menu() {
             </div>
           </div>
           <div className="w-2/4 p-12 flex items-center justify-center h-full relative mt-8">
-            <div className="absolute top-16 left-12 p-2">
+            <div className="absolute top-16 left-12 p-2 border">
               <div className="flex items-center">
                 {" "}
                 {/* Container untuk gambar dan teks */}
@@ -140,7 +140,7 @@ export default function Menu() {
             </div>
           </div>
           <div className="w-2/4 p-12 flex items-center justify-center h-full relative mt-8">
-            <div className="absolute top-16 left-12 p-2">
+            <div className="absolute top-16 left-12 p-2 border">
               <div className="flex items-center">
                 <img
                   src="https://images.unsplash.com/photo-1695750733098-2e3617fa43df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80"
