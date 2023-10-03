@@ -1,8 +1,36 @@
 // import SwitchFollow from "./Swtch-Follow";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHouse,
+  faSearch,
+  faCompass,
+  faComment,
+  faBell,
+  faEdit,
+  faUser,
+  faBars,
+} from "@fortawesome/free-solid-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 export default function Story() {
   return (
     <>
+      <div className="py-2 px-4 bg-gray-100 border-none focus:outline-none m-12 w-1/4">
+        <div className="flex items-center border rounded-lg overflow-hidden">
+          <input
+            type="text"
+            placeholder="Cari..."
+            className="bg-gray-100 border-none focus:outline-none"
+          />
+          <div className="flex items-center hover:bg-gray-200 cursor-pointer">
+            <FontAwesomeIcon
+              icon={faSearch}
+              className="w-4 h-8 text-gray-600"
+            />
+          </div>
+        </div>
+      </div>
+
       <div className="flex">
         <div>
           <img
